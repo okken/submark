@@ -33,7 +33,7 @@ $ submark something.md > something.html
 
 or:
 ~~~
-$ cat something.html | submark > something.html
+$ cat something.md | submark > something.html
 ~~~
 
 or:
