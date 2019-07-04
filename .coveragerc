@@ -2,3 +2,4 @@
 omit = 
     .venv/*
     venv/*
+    .tox/*
