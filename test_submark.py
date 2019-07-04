@@ -22,6 +22,9 @@ def test_convert(line, expected):
     assert submark.convert(line) == expected
 
 
+# skipping temporariy to demonstrate that the above test doesn't test the
+# installed version, and we result in 0 coverage
+@pytest.mark.skip()
 def test_command_line_with_pipe():
     """
     Simulate: echo '**strong**' | submark

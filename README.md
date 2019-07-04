@@ -57,12 +57,6 @@ Then install `tox`.
 (submark) $ pip install tox
 ~~~
 
-There's already a `.coveragerc` file to exclude 
-
-* `venv` 
-* `.venv`.
-* `.tox`.
-
 Now run tests.
 
 ~~~
@@ -83,8 +77,8 @@ There should be a wheel now sitting in a `dist` folder.
 
 ~~~
 (submark) $ ls dist
-submark-0.2-py2.py3-none-any.whl
-submark-0.2.tar.gz
+submark-0.4-py2.py3-none-any.whl
+submark-0.4.tar.gz
 ~~~
 
 ## Deploying
@@ -111,4 +105,5 @@ or:
 * 0.1 Initial script and tests
 * 0.2 build wheel with flit
 * 0.3 build and test with tox
+* 0.4 move source module into a package directory
 
