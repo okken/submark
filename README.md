@@ -24,17 +24,17 @@ Subset of Markdown
 
 Use it like this:
 ~~~
-$ python3 submark.py something.md > something.html
+$ submark something.md > something.html
 ~~~
 
 or:
 ~~~
-$ cat something.html | python3 submark.py > something.html
+$ cat something.html | submark > something.html
 ~~~
 
 or:
 ~~~
-$ echo '**hi**' | python3 submark.py
+$ echo '**hi**' | submark
 <strong>hi</strong>
 ~~~
 
@@ -107,4 +107,3 @@ or:
 * 0.3 build and test with tox
 * 0.4 move source module into a package directory
 * 0.5 move tests into tests directory
-
