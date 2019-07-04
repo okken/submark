@@ -1,20 +1,6 @@
 """
-A Subset of Markdown
-
-Use it like this:
-python3 submark.py something.md > something.html
-
-or:
-cat something.html | python3 submark.py > something.html
-
-or:
-$ echo '**hi**' | python3 submark.py
-<strong>hi</strong>
 """
 
-__version__ = '0.3'
-
-import fileinput
 import re
 
 
@@ -54,11 +40,3 @@ def convert_list(lines):
 
 def convert(some_string):
     return convert_list(some_string.split("\n"))
-
-
-def main():
-    print(convert_list(fileinput.input()))
-
-
-if __name__ == "__main__":
-    main()

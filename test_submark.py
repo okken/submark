@@ -24,13 +24,12 @@ def test_convert(line, expected):
 
 def test_command_line_with_pipe():
     """
-    Simulate: echo '**strong**' | python submark.py
+    Simulate: echo '**strong**' | submark
     """
     input_text = "**strong**"
     expected = "<strong>strong</strong>"
 
-    interpreter_and_script = ["python3", "submark.py"]
-    pipe = Popen(interpreter_and_script, stdout=PIPE, stdin=PIPE, stderr=STDOUT)
+    pipe = Popen(["submark"], stdout=PIPE, stdin=PIPE, stderr=STDOUT)
     output = pipe.communicate(input=input_text.encode("utf-8"))[0]
     actual = output.rstrip().decode("utf-8")
 

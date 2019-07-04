@@ -9,3 +9,5 @@ author-email = ""
 home-page = "https://github.com/okken/submark"
 classifiers = ["License :: OSI Approved :: MIT License"]
 
+[tool.flit.scripts]
+submark = "submark:main"(submark)
