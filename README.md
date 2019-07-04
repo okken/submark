@@ -1,6 +1,10 @@
 # submark
 Subset of Markdown
 
+This project started as an example project to describe migrating from a script to a package, utilizing flit, tox, coverage, and pytest. 
+
+See http://testandcode.com/80 for the story.
+
 ## Features
 
 * Convert headings 
