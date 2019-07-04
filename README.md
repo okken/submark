@@ -72,7 +72,36 @@ Make sure everything is committed before running `flit`.
 
 ~~~
 (submark) $ pip install flit
+(submark) $ flit build
 ~~~
+
+Yep. That's it. 
+There should be a wheel now sitting in a `dist` folder.
+
+~~~
+(submark) $ ls dist
+submark-0.2-py2.py3-none-any.whl
+submark-0.2.tar.gz
+~~~
+
+## Deploying
+
+Flit does that too.
+
+~~~
+(submark) $ flit publish
+~~~
+
+But don't do that unless:
+
+* You are Brian Okken
+
+or:
+
+* You are pointing to something other than pypi
+* see https://flit.readthedocs.io/en/latest/upload.html
+
+
 
 ## History
 
