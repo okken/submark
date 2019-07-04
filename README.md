@@ -77,8 +77,8 @@ There should be a wheel now sitting in a `dist` folder.
 
 ~~~
 (submark) $ ls dist
-submark-0.4-py2.py3-none-any.whl
-submark-0.4.tar.gz
+submark-0.5-py2.py3-none-any.whl
+submark-0.5.tar.gz
 ~~~
 
 ## Deploying
@@ -106,4 +106,5 @@ or:
 * 0.2 build wheel with flit
 * 0.3 build and test with tox
 * 0.4 move source module into a package directory
+* 0.5 move tests into tests directory
 
