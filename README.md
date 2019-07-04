@@ -111,3 +111,4 @@ or:
 * 0.3 build and test with tox
 * 0.4 move source module into a package directory
 * 0.5 move tests into tests directory
+* 0.6 hook up readme in toml file
