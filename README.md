@@ -51,19 +51,22 @@ $ source venv/bin/activate
 (submark) $ pip install -U pip
 ~~~
 
-Then install `pytest` and `pytest-cov`.
+Then install `tox`.
 
 ~~~
-(submark) $ pip install pytest pytest-cov
+(submark) $ pip install tox
 ~~~
 
-There's already a `.coveragerc` file to exclude `venv` or `.venv`.
+There's already a `.coveragerc` file to exclude 
+
+* `venv` 
+* `.venv`.
+* `.tox`.
 
 Now run tests.
 
 ~~~
-(submark) $ pip install pytest pytest-cov
-(submark) $ pytest --cov=.
+(submark) $ tox
 ~~~
 
 ## Building a wheel
@@ -107,4 +110,5 @@ or:
 
 * 0.1 Initial script and tests
 * 0.2 build wheel with flit
+* 0.3 build and test with tox
 
