@@ -1,0 +1,11 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "submark"
+author = "Brian Okken"
+author-email = ""
+home-page = "https://github.com/okken/submark"
+classifiers = ["License :: OSI Approved :: MIT License"]
+

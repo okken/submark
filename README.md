@@ -66,8 +66,16 @@ Now run tests.
 (submark) $ pytest --cov=.
 ~~~
 
+## Building a wheel
+
+Make sure everything is committed before running `flit`.
+
+~~~
+(submark) $ pip install flit
+~~~
 
 ## History
 
-* 0.1 Initial script and tests.
+* 0.1 Initial script and tests
+* 0.2 build wheel with flit
 
