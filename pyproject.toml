@@ -6,6 +6,7 @@ build-backend = "flit.buildapi"
 module = "submark"
 author = "Brian Okken"
 author-email = ""
+description-file = "README.md"
 home-page = "https://github.com/okken/submark"
 classifiers = ["License :: OSI Approved :: MIT License"]
 
