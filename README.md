@@ -23,6 +23,23 @@ See http://testandcode.com/80 for the story.
     * `**something**` -> `<em>something</em>`
     * `__something__`-> `<em>something</em>`
 
+* links
+    * `[message](http://some.link.html "my title")`  
+      -> `<a href="http://some.link.html" title="my title">message</a>`
+    * `[message](http://some.link.html)`  
+      -> `<a href="http://some.link.html">message</a>`
+
+* images
+    * `![alt](/some/image.png "title")'`  
+       -> `'<img src="/some/image.png" title="title"/>`
+       
+* inline code
+    * ``this is `some code` ``  
+       -> `this is <code>some code</code> `
+       
+* line breaks with two spaces at end of text
+* horizontal rules, 3 or more dashes
+    * `---` -> `<hr>`
 
 ## Usage
 
@@ -42,10 +59,9 @@ $ echo '**hi**' | submark
 <strong>hi</strong>
 ~~~
 
+## Dev & Test virtual environment
 
-## Testing
-
-Test in a virtual environment with the usual incantations.
+Testing and development should be done with a virtual environment.
 
 ~~~
 $ git clone https://github.com/okken/submark.git
@@ -55,19 +71,41 @@ $ source venv/bin/activate
 (submark) $ pip install -U pip
 ~~~
 
-Then install `tox`.
+
+### Testing
+
+Testing is done with `tox`.
 
 ~~~
 (submark) $ pip install tox
+(submark) $ tox
 ~~~
 
-Now run tests.
+### Development
+
+Development requires a few tools. 
+Install submark locally and install dev tools with flit.
+
+~~~
+(submark) $ pip install flit
+(submark) $ flit install --pth-file
+~~~
+
+Then you can test any changes locally with pytest.
+
+~~~
+(submark) $ pytest --cov=submark 
+~~~
+
+And when ready to test everything as an installed package:
 
 ~~~
 (submark) $ tox
 ~~~
 
-## Building a wheel
+
+
+### Building a wheel
 
 Make sure everything is committed before running `flit`.
 
@@ -112,3 +150,7 @@ or:
 * 0.4 move source module into a package directory
 * 0.5 move tests into tests directory
 * 0.6 hook up readme in toml file
+* 0.7 
+    * flit for development with requires-extra,
+    * support for links, images, inline code, line breaks, horizontal rules
+

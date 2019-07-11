@@ -22,6 +22,36 @@ def test_convert(line, expected):
     assert submark.convert(line) == expected
 
 
+@pytest.mark.parametrize(
+    "line, expected",
+    [
+        param(r'[message](http://some.link.html)',
+              r'<a href="http://some.link.html">message</a>',
+              id="normal_link"),
+        param(r'[message](http://some.link.html "my title")',
+              r'<a href="http://some.link.html" title="my title">message</a>',
+              id="link_with_title"),
+        param(r'![alt](/some/image.png "title")',
+              r'<img src="/some/image.png" alt="alt" title="title"/>',
+              id="image"),
+        param(r"this is `some code`",
+              r"this is <code>some code</code>",
+              id="code_span"),
+        param(r"`some code` and `more code`",
+              r"<code>some code</code> and <code>more code</code>",
+              id="two_code_spans"),
+        param(r"some text  ",
+              r"some text <br>",
+              id="line_break"),
+        param(r"---", r"<hr/>", id="hr3"),
+        param(r"----", r"<hr/>", id="hr4"),
+        param(r"-----   ", r"<hr/>", id="hr_with_spaces")
+    ],
+)
+def test_convert_new_stuff(line, expected):
+    assert submark.convert(line) == expected
+
+
 def test_command_line_with_pipe():
     """
     Simulate: echo '**strong**' | submark

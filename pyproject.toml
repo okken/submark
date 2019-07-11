@@ -10,5 +10,8 @@ description-file = "README.md"
 home-page = "https://github.com/okken/submark"
 classifiers = ["License :: OSI Approved :: MIT License"]
 
+[tool.flit.metadata.requires-extra]
+test = ["pytest", "pytest-cov", "tox"]
+
 [tool.flit.scripts]
 submark = "submark:main"
