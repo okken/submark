@@ -24,9 +24,10 @@ steps:
 - script: |
     python -m pip install --upgrade pip
     pip install flit pytest-azurepipelines
-    flit install
+    flit install -s
   displayName: 'Install dependencies'
 
+
 - script: |
-    pytest --cov=submark
+    pytest -v --cov=submark
   displayName: 'pytest'
