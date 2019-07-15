@@ -29,5 +29,5 @@ steps:
 
 
 - script: |
-    pytest -v --cov=submark
+    pytest -v --cov=submark --cov-report=xml --cov-report=term
   displayName: 'pytest'
