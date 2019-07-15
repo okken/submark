@@ -30,4 +30,7 @@ steps:
 
 - script: |
     pytest -v --cov=submark --cov-report=xml --cov-report=term
+    codecov
   displayName: 'pytest'
+  env:
+    CODECOV_TOKEN: 'bab6fd29-1f35-4bb4-9cb6-fce26f55687a'
