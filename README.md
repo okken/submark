@@ -1,4 +1,8 @@
 # submark
+
+[![image](https://img.shields.io/pypi/v/cards.svg)](https://pypi.python.org/pypi/submark)
+[![Build Status](https://dev.azure.com/okken/submark/_apis/build/status/okken.submark?branchName=master)](https://dev.azure.com/okken/submark/_build/latest?definitionId=3&branchName=master)
+
 Subset of Markdown
 
 This project started as an example project to describe migrating from a script to a package, utilizing flit, tox, coverage, and pytest. 
