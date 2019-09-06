@@ -2,6 +2,7 @@
 
 [![image](https://img.shields.io/pypi/v/submark.svg)](https://pypi.python.org/pypi/submark)
 [![codecov](https://codecov.io/gh/okken/submark/branch/master/graph/badge.svg)](https://codecov.io/gh/okken/submark)
+[![Build Status](https://dev.azure.com/okken/submark/_apis/build/status/okken.submark?branchName=master)](https://dev.azure.com/okken/submark/_build/latest?definitionId=3&branchName=master)
 
 Subset of Markdown
 
